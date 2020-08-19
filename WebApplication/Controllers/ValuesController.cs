@@ -14,14 +14,12 @@ namespace WebApplication.Controllers
     {
         // GET api/values
         [HttpGet]
-        [AuthorizationFilter]
         public IActionResult Get()
         {
             return Ok(new List<string>() { "value1", "value2" });
         }
 
         // GET api/values/5
-        [AuthorizationFilter]
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
